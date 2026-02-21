@@ -19,5 +19,9 @@ jobs:
           GITHUB_PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          socket_org: 'erika-s-org'
+          socket_security_api_key: ${{ secrets.SOCKET_SECURITY_API_KEY }}
           javascript_sast_enabled: 'true'
           secret_scanning_enabled: 'true'
+          socket_tier_1_enabled: 'true'
+          console_tabular_enabled: 'true'
